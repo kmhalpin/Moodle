@@ -41,13 +41,14 @@
             "location": "[parameters('moodleCommon').location]",
             "name": "[parameters('moodleCommon').serverName]",
             "properties": {
+                "createMode": "Default",
                 "administratorLogin": "[parameters('moodleCommon').dbLogin]",
                 "administratorLoginPassword": "[parameters('moodleCommon').dbLoginPassword]",
                 "sslEnforcement": "[parameters('moodleCommon').sslEnforcement]",
                 "storageProfile": {
                     "storageMB": "[mul(parameters('moodleCommon').mysqlPgresStgSizeGB, 1024)]",
-                    "backupRetentionDays": "35",
-                    "geoRedundantBackup": "Enabled"
+                    "backupRetentionDays": 7,
+                    "geoRedundantBackup": "Disabled"
                 },
                 "version": "[parameters('moodleCommon').mysqlVersion]"
             },
