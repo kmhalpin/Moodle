@@ -58,11 +58,11 @@
       "type": "string"
     },
     "siteURL": {
-        "defaultValue": "www.example.org",
-        "metadata": {
-            "description": "URL for Moodle site"
-        },
-        "type": "string"
+      "defaultValue": "www.example.org",
+      "metadata": {
+        "description": "URL for Moodle site"
+      },
+      "type": "string"
     }
   },
   "resources": [
@@ -83,13 +83,13 @@
           "sslCertThumbprint": { "value": "[parameters('sslCertThumbprint')]" },
           "caCertKeyVaultURL": { "value": "[parameters('caCertKeyVaultURL')]" },
           "caCertThumbprint": { "value": "[parameters('caCertThumbprint')]" },
-          "controllerVmSku": "Standard_B2s",
+          "controllerVmSku": { "value": "Standard_B2s" },
           "mysqlPgresVcores": { "value": 2 },
           "mysqlPgresStgSizeGB": { "value": 5 },
           "fileServerType": { "value": "azurefiles" },
           "fileServerDiskSize": { "value": 1024 },
-          "installObjectFsSwitch": true,
-          "installO365pluginsSwitch": true,
+          "installObjectFsSwitch": { "value": true },
+          "installO365pluginsSwitch": { "value": true },
           "storageAccountType": { "value": "Premium_LRS" },
           "autoscaleVmSku": { "value": "Standard_B2s" }
         },
