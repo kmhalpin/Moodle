@@ -91,6 +91,7 @@
           "installObjectFsSwitch": { "value": true },
           "installO365pluginsSwitch": { "value": true },
           "storageAccountType": { "value": "Premium_LRS" },
+          "enableAccelNwForOtherVmsSwitch": { "value": false },
           "autoscaleVmSku": { "value": "Standard_B2s" }
         },
         "templateLink": {
