@@ -873,7 +873,7 @@ EOF
     
     # use /tmp/localcachedir/ for localcache and /var/www/html/moodle/ for core_component.php
     dir="/var/www/html/moodle"
-    if [[ ! -d $dir ]]; then
+    if [ ! -d $dir ]; then
         mkdir -p $dir
     fi
     sed -i "22 a \$CFG->localcachedir = '/tmp/localcachedir';" /moodle/html/moodle/config.php
