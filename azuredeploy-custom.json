@@ -56,6 +56,13 @@
         "description": "(VMSS https termination only) Thumbprint of your stored CA cert. This value can be obtained from keyvault.sh output if you used the script to store your CA cert in your Key Vault. This parameter is ignored if the keyVaultResourceId parameter is blank."
       },
       "type": "string"
+    },
+    "siteURL": {
+        "defaultValue": "www.example.org",
+        "metadata": {
+            "description": "URL for Moodle site"
+        },
+        "type": "string"
     }
   },
   "resources": [
@@ -70,6 +77,7 @@
           "_artifactsLocationSasToken": { "value": "[parameters('_artifactsLocationSasToken')]" },
           "redisDeploySwitch": { "value": false },
           "sshPublicKey": { "value": "[parameters('sshPublicKey')]" },
+          "siteURL": { "value": "[parameters('siteURL')]" },
           "keyVaultResourceId": { "value": "[parameters('keyVaultResourceId')]" },
           "sslCertKeyVaultURL": { "value": "[parameters('sslCertKeyVaultURL')]" },
           "sslCertThumbprint": { "value": "[parameters('sslCertThumbprint')]" },
